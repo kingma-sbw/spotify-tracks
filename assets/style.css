@@ -1,0 +1,32 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background:url(img/background.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:blueviolet;
+
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+input[type=text],button {
+  border: none;
+  background:transparent;
+  backdrop-filter:blur(20px) brightness(90%);
+  font-size: inherit;
+}
+button {
+  background-color: lawngreen;
+  border: none;
+  cursor: paint;
+}
+
+
