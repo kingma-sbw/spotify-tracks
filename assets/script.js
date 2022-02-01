@@ -1,6 +1,6 @@
 "use strict";
-const clientId = 'ca000ee4f7eb40b993c71aaeb3bc3813';
-const clientSecret = '9063ae6add144f209f9c44135da9b92a';
+const clientId = 'your id';
+const clientSecret = 'your secret';
 /**
  * get the spotify_token on load. 
  * As soon as it is loaded enable the 'ok' button
@@ -43,7 +43,7 @@ let okBtn = document.getElementById('ok').onclick = async function() {
 /**
  * put the results as ul in the div tag
  *
- * @param track[] tracks
+ * @param object[] tracks
  */
 function showResult(tracks) {
   const resultDiv = document.getElementById('result');
@@ -68,7 +68,12 @@ function showResult(tracks) {
   })
 }
 
-
+/**
+ * Get a token from spotify
+ * store it in document property spotify_token
+ * also activates the ok button
+ * @param {Event} event 
+ */
 async function requestSpotifyToken(event) {
   const headers =  {
     'Accept': 'application/json',
