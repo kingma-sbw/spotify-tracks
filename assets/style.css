@@ -29,4 +29,7 @@ button {
   cursor: paint;
 }
 
+section#input-form{
+  display:flex;
+}
 
